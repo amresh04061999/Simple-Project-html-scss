@@ -1,0 +1,31 @@
+// header section
+#header {
+    @include box;
+    height: $header-height;
+    background-color: $theme-color;
+           
+    #main-menu {
+        color:$manu-item-color;
+        
+        li{
+            display: inline-block;
+            a{
+                color: $manu-item-color;
+                padding: 6px 6px;
+                border-bottom: 2px solid transparentize(#efefef,1);
+                transition: border-bottom 1s;
+                transition-timing-function: ease-in-out;
+                &:hover{
+                    border-bottom: 1px solid Red;
+                  }
+            }
+        }
+      
+         
+    }
+    #logo {
+  
+    }
+  }
+  
+ 

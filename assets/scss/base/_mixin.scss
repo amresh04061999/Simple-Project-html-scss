@@ -1,0 +1,89 @@
+//  @mixin  craeted and used this mixing using @incluede.
+
+// worning button mixin created
+// Simple mixing
+@mixin worning {
+    background-color: rgb(226, 151, 12);
+    color: black;
+    border: none;
+    @include rounded;
+}
+@mixin rounded{
+    border-radius: 5px;
+}
+@mixin font-lage-size{
+      font: {
+        size: 40px;
+        weight: bold;
+
+      }
+}
+@mixin box{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+@mixin link {
+    a {
+        text-decoration: none;
+    }
+}
+// Mixins with Arguments
+@mixin border-radius($radius:5px){
+    border-radius:$radius ;
+}
+@mixin box-shadow($Shadow...){
+    box-shadow:$Shadow ;
+}
+
+// media query mixin
+
+
+
+
+@mixin extra-large-screens(){
+    @media (max-width: 1440px) {
+        @content;
+        
+    }
+}
+@mixin large-screens(){
+    @media  (max-width: 960px) {
+        @content;
+        
+    }
+}
+@mixin medium-screens(){
+    @media (max-width: 680px) {
+        @content;
+    }
+}
+@mixin small-screens(){
+    @media  (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tiny-screens(){
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+
+
+// if condition
+@mixin blue-beans {
+    @if $brand == blue-beans{
+        @content;
+    }
+}
+@mixin rogers-rover {
+    @if $brand == rogers-rover{
+        @content;
+    }
+}
+@mixin pastry-pizza {
+    @if $brand == pastry-pizza{
+        @content;
+    }
+}

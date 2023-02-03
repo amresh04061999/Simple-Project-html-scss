@@ -1,0 +1,44 @@
+// ===== color ======
+  $text-color:#222222;
+  $theme-color:#170a48;
+  $secondry-color:#f27731;
+  $ternary-color:#ccf962;
+  $link-color:$secondry-color;
+  $manu-item-color:white;
+  $body-bg-color:#fff;
+
+//  ===== Font =====
+$text-font:Verdana ,Arial,sans-serif;
+$headline-font:'Palatino Linotype',Georgia,serif;
+
+
+// ==== Size ====
+$header-height:70px;
+$footer-height:60px;
+$content-width:960px;
+$col: col-width(8);
+
+
+// create theme
+$theme:Default;
+// alow dark , light ,default
+@if $theme == Dark{
+  $text-color:#fff;
+  $theme-color:#170a48;
+  $secondry-color:#f27731;
+  $ternary-color:#ccf962;
+  $link-color:$secondry-color;
+  $manu-item-color:white;
+  $body-bg-color:#22222a;
+}@else if $theme ==Light{
+  $text-color:#222222;
+  $theme-color:#170a48;
+  $secondry-color:#f27731;
+  $ternary-color:#ccf962;
+  $link-color:$secondry-color;
+  $manu-item-color:white;
+  $body-bg-color:#fff;
+}
+
+// if condition used in mixin
+ $brand :rogers-rover;

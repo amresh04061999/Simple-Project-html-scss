@@ -1,0 +1,8 @@
+#footer {
+    height: $footer-height;
+    background-color: $ternary-color;
+    @include border-radius(50px);
+   @include rogers-rover{
+   border-top:20px solid darken($color: $ternary-color, $amount: 15%)
+  }
+}

@@ -1,0 +1,36 @@
+@include link;
+#main {
+  width: $content-width;
+  margin-left: auto;
+  margin-right: auto;
+ 
+  @include small-screens(){
+      width: auto;
+      max-width: 1440px;
+  }
+    #content {
+      // float: left;
+      // width: 6*$col;
+      
+      h1{
+        @include font-lage-size;
+        margin:10px 0px ;
+      }
+      .warning-btn{
+        @include worning;
+        padding: 10px 40px;
+        margin:10px 0px ;
+        @include box-shadow(1px 4px rgba(51, 52, 63, 0.87) );
+        &:hover{
+            background-color: lighten($color: orange, $amount: 10%);
+           
+        }
+      }
+    }
+  
+    #sidebar {
+      // float: right;
+      // width: 2*$col;
+    }
+  }
+  

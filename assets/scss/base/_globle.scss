@@ -1,3 +1,68 @@
-body{
-    background-color: aqua;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+html,body{
+    width: 100%;
+    height: 100%;
+}
+// $constrast:low;
+body {
+    font-family:$text-font;
+    // @if $constrast == high{
+    //   color: red;
+    //   background-color: black;
+    // }@else if $constrast == low {
+    //   color: blue;  
+    //   background-color: white;
+    // }@else {
+    //   color: white;
+    //   background-color: black;
+    // }
+    color: $text-color;
+    font-size: em(18px);
+    background-color: $body-bg-color;
+
+    // @include extra-large-screens{
+    //   font-size: 60px;
+    // }
+  }
+
+  
+  h1, h2, h3, h4 {
+    font-family:$text-font ;
+  }
+  p {
+    font-family: $headline-font;
+ 
+  }
+  a {
+   color:$link-color;
+   @include blue-beans {
+    color: blue;
+   }
+   &:hover{
+    color: darken($color:$link-color, $amount: 15%);
+   }
+  }
+  
+
+  // inheritance with extend
+  .error{
+    color: red;
+  }
+  .critical-error{
+  @extend .error;
+    bottom: 1px soild red;
+    font-weight: bold;
+  }
+
+  // created placeholder no create css  using % 
+  %highlight{
+    font-style: italic;
+  }
+  .sub-title{
+    @extend %highlight;
+    font-size: 20px;
+  }
